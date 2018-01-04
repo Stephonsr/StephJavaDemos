@@ -1,11 +1,13 @@
 package javaFunctions;
 
+import java.util.Scanner;
+
 public class SwitchStatement {
 
 	public static void main(String[] args) {
 		//
 		int day = 3;
-		//switch(expression)
+		//switch(expression) 
 		switch (day) {
 		
 		case 1:
@@ -26,6 +28,42 @@ public class SwitchStatement {
 		    System.out.println("Weekday");
 		    //no break is needed in the default case
 		}
+		
+		//Java switch example two
+		char operator;
+    	Double number1, number2, result;
+    	
+    	Scanner scanner = new Scanner(System.in);
+    	System.out.print("Enter operator (either +, -, * or /): ");
+    	operator = scanner.next().charAt(0);
+    	System.out.print("Enter number1 and number2 respectively: ");
+    	number1 = scanner.nextDouble();
+    	number2 = scanner.nextDouble();
+    	
+    	switch (operator) {
+         case '+':
+           result = number1 + number2;
+    	   System.out.print(number1 + "+" + number2 + " = " + result);
+           break;
+
+         case '-':
+           result = number1 - number2;
+           System.out.print(number1 + "-" + number2 + " = " + result);
+           break;
+
+         case '*':
+           result = number1 * number2;
+           System.out.print(number1 + "*" + number2 + " = " + result);
+           break;
+
+         case '/':
+           result = number1 / number2;
+           System.out.print(number1 + "/" + number2 + " = " + result);
+           break;
+
+         default: 
+           System.out.println("Invalid operator!");
+           break;
 
 	}
-}
+}}
